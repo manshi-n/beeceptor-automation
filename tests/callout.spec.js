@@ -22,4 +22,5 @@ test('Beeceptor HTTP Callout workflow', async ({ page, request }) => {
   await expect(page.getByText('/order')).toHaveCount(1, { timeout: 10000 });
 
   console.log('✅ HTTP Callout workflow verified successfully!');
+  
 });
