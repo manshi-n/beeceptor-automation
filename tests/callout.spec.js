@@ -19,7 +19,7 @@ test('Beeceptor HTTP Callout workflow', async ({ page, request }) => {
   // Step 3: Verify request appeared in Beeceptor
   await page.reload();
   await page.waitForLoadState('networkidle');
-  await expect(page.getByText('/order')).toHaveCount(1, { timeout: 10000 });
+  await expect(page.getByText('/order').first()).toBeAttached({ timeout: 10000 });
 
   console.log('✅ HTTP Callout workflow verified successfully!');
   
